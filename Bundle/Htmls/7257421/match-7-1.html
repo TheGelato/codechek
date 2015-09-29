@@ -1,0 +1,148 @@
+<html><head><title></title></head><body bgcolor=282828><HR></br><FONT color = #FFFAF0>&gt;&gt;&gt;&gt; file: Lexical.java</FONT></br></br><p><pre>
+<FONT color = #FF4500>package project1;
+import java.util.*;
+
+public class Lexical {
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		ArrayList&ltString&gt stmain = new ArrayList&ltString&gt();
+		int t=0,p=0;
+		while (in.hasNext()){
+			String str=in.next();
+			if(str.contains("/*")|str.contains("*/")|str.contains("//")){
+				if (str.contains("/*")&&str.contains("*/")){
+					stmain.add(str.substring(0, 2));
+					stmain.add(str.substring(2, str.length()-2));
+					stmain.add(str.substring(str.length()-2, str.length()));
+				}int[][] array=new int[5][5];
+		array=generate_list(array);
+		 Random rnd = new Random();
+		  for(int i=0;i&lt100;i++){
+			 int t=0;
+			 int j1=rnd.nextInt(5);
+		  	 int k1=rnd.nextInt(5);
+		  	 int j2=rnd.nextInt(5);
+</FONT><FONT color = #FFFAF0>		  	 int k2=rnd.nextInt(5);
+</FONT><FONT color = #FFFAF0>		  	 t=array[j1][k1];
+</FONT><FONT color = #FFFAF0>		  	 array[j1][k1]=array[j2][k2];
+</FONT><FONT color = #FFFAF0>		  	 array[j2][k2]=t;
+</FONT><FONT color = #FFFAF0>		  }
+</FONT><FONT color = #FFFAF0>		  return array;
+</FONT><FONT color = #FFFAF0>	}
+</FONT><FONT color = #FFFAF0>	
+</FONT><FONT color = #FFFAF0>	//Method to print grid
+</FONT><FONT color = #FFFAF0>	public static void printGrid(int[][] print_arr)
+</FONT><FONT color = #FFFAF0>	{
+</FONT><FONT color = #FFFAF0>	   for(int i = 0; i &lt 5; i++)
+</FONT><FONT color = #FFFAF0>	   {
+</FONT><FONT color = #FFFAF0>				else if(str.contains("/*")){
+</FONT><FONT color = #FFFAF0>					if(str.contentEquals("/*")){
+</FONT><FONT color = #FFFAF0>						stmain.add(str);
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>					else {
+</FONT><FONT color = #FFFAF0>						stmain.add(str.substring(0, 2));
+</FONT><FONT color = #FFFAF0>						stmain.add(str.substring(2, str.length()));
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				else if (str.contains("*/")) {
+</FONT><FONT color = #FFFAF0>					if(str.contentEquals("*/")){
+</FONT><FONT color = #FFFAF0>						stmain.add(str);
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>					else {
+</FONT><FONT color = #FFFAF0>						stmain.add(str.substring(0, str.length()-2));
+</FONT><FONT color = #FFFAF0>						stmain.add(str.substring(str.length()-2, str.length()));
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				else {
+</FONT><FONT color = #FFFAF0>					if(str.contentEquals("//")){
+</FONT><FONT color = #FFFAF0>						stmain.add(str);
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>					else {
+</FONT><FONT color = #FFFAF0>						stmain.add(str.substring(0, 2));
+</FONT><FONT color = #FFFAF0>						stmain.add(str.substring(2, str.length()));
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				
+</FONT><FONT color = #FFFAF0>			}
+</FONT><FONT color = #FFFAF0>			else if(str.contains(":=")|str.contains("&gt=")|str.contains("&lt=")|str.contains("'")){
+</FONT><FONT color = #FFFAF0>				stmain.add(str);
+</FONT><FONT color = #FFFAF0>			}
+</FONT><FONT color = #FFFAF0>			else if (str.contains("+")|str.contains("-")|str.contains("*")|str.contains("/")|str.contains("%")|str.contains("=")|str.contains("&lt")|str.contains("&gt")|str.contains("(")|str.contains(")")|str.contains("{")|str.contains("}")|str.contains(".")|str.contains(";")|str.contains(":")|str.contains("!")|str.contains("?")|str.contains(",")){
+</FONT><FONT color = #FFFAF0>				if(str.length()==1){
+</FONT><FONT color = #FFFAF0>					stmain.add(str);
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				else{
+</FONT><FONT color = #FFFAF0>				ArrayList intray = new ArrayList();
+</FONT><FONT color = #FFFAF0>				 intray.add(0);
+</FONT><FONT color = #FFFAF0>				 ArrayList stray = new ArrayList();
+</FONT><FONT color = #FFFAF0>				for(int i=0;i&ltstr.length();i++){
+</FONT><FONT color = #FFFAF0>					char k=str.charAt(i);
+</FONT><FONT color = #FFFAF0>					if (k==37|k==33|k==123|k==125|(k&gt39&&k&lt48)|(k&gt57&&k&lt64)){
+</FONT><FONT color = #FFFAF0>						intray.add(i);
+</FONT><FONT color = #FFFAF0>					}
+</FONT><FONT color = #FFFAF0>				}	
+</FONT><FONT color = #FFFAF0>				intray.add(str.length()-1);
+</FONT><FONT color = #FFFAF0>			
+</FONT><FONT color = #FFFAF0>				if(intray.get(0)==intray.get(1)){
+</FONT><FONT color = #FFFAF0>					stray.add(str.charAt(0));
+</FONT><FONT color = #FFFAF0>					intray.remove(0);
+</FONT><FONT color = #FFFAF0>					p=0;
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				else {
+</FONT><FONT color = #FFFAF0>					p=1;
+</FONT><FONT color = #FFFAF0>					stray.add(str.substring(0,(int) intray.get(1)));
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				if(intray.get(intray.size()-2)==intray.get(intray.size()-1)){
+</FONT><FONT color = #FFFAF0>					t=1;
+</FONT><FONT color = #FFFAF0>					intray.remove(intray.size()-1);
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				
+</FONT><FONT color = #FFFAF0>				for(int i=p;i&ltintray.size()-1;i++){
+</FONT><FONT color = #FFFAF0>					stray.add(str.charAt((int)intray.get(i)));
+</FONT><FONT color = #FFFAF0>					stray.add(str.substring((int) intray.get(i)+1,(int) intray.get(i+1)));
+</FONT><FONT color = #FFFAF0>					
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				
+</FONT><FONT color = #FFFAF0>				if(stray.size()&gt1){
+</FONT><FONT color = #FFFAF0>					if(stray.get(0)==stray.get(1)){
+</FONT><FONT color = #FFFAF0>					stray.remove(0);
+</FONT><FONT color = #FFFAF0>					}	
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				if(t==1){
+</FONT><FONT color = #FFFAF0>					stray.add(str.charAt((int)intray.get(intray.size()-1)));
+</FONT><FONT color = #FFFAF0>				
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				
+</FONT><FONT color = #FFFAF0>				if (p==1&&(stray.size()&gt2)){
+</FONT><FONT color = #FFFAF0>					stray.remove(stray.size()-1);
+</FONT><FONT color = #FFFAF0>					stray.add(str.substring((int) intray.get(intray.size()-2)+1,(int) intray.get(intray.size()-1)+1));
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				else {
+</FONT><FONT color = #FFFAF0>					stray.add(str.charAt((int)intray.get(intray.size()-1)));
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				if(stray.get(stray.size()-2)==stray.get(stray.size()-1)){
+</FONT><FONT color = #FFFAF0>					stray.remove(stray.size()-1);
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>				stmain.addAll(stray);
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>			}
+</FONT><FONT color = #FFFAF0>			else{
+</FONT><FONT color = #FFFAF0>				stmain.add(str);	
+</FONT><FONT color = #FFFAF0>			}
+</FONT><FONT color = #FFFAF0>			for(int i=0;i&ltstmain.size();i++){
+</FONT><FONT color = #FFFAF0>				if(stmain.get(i)==""){
+</FONT><FONT color = #FFFAF0>					System.out.println("sds");
+</FONT><FONT color = #FFFAF0>					String a=(String) stmain.get(i-1);
+</FONT><FONT color = #FFFAF0>					System.out.println(a);
+</FONT><FONT color = #FFFAF0>					a.concat((String) stmain.get(i+1));
+</FONT><FONT color = #FFFAF0>					stmain.set(i-1, a);
+</FONT><FONT color = #FFFAF0>				}
+</FONT><FONT color = #FFFAF0>			}
+</FONT><FONT color = #FFFAF0>			System.out.println(stmain);
+</FONT><FONT color = #FFFAF0>			
+</FONT><FONT color = #FFFAF0>			
+</FONT><FONT color = #FFFAF0>		}
+</FONT><FONT color = #FFFAF0>		
+</FONT><FONT color = #FFFAF0>	}
+</FONT><FONT color = #FFFAF0>}
+</FONT></p></pre></body></html>
